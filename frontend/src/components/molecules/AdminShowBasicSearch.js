@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Collapse, Row, Col, Container } from 'reactstrap';
-import {AdminAdvancedSearch2} from '../molecules/AdminAdvancedSearch2';
+import {AdminBasicSearch} from '../molecules/AdminBasicSearch';
 
-export class AdminShowAdvancedSearch2 extends Component {
+export class AdminShowBasicSearch extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = { collapse: false,
-                   text: 'Zobrazit pokročilé filtrování',
+                   text: 'Zobrazit základní filtrování',
                  };
   }
 
@@ -29,7 +29,7 @@ export class AdminShowAdvancedSearch2 extends Component {
         <Row>
           <Col xs="12">
             <Collapse isOpen={this.state.collapse}>
-              <AdminAdvancedSearch2></AdminAdvancedSearch2>
+              <AdminBasicSearch></AdminBasicSearch>
             </Collapse>
           </Col>
         </Row>
