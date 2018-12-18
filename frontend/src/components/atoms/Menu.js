@@ -7,6 +7,7 @@ const data = [
   { href: '/vysetreni', title: 'Preventivní vyšetření'},
   { href: '/pribehy', title: 'Příběhy #PrevenceMaSmysl'},
   { href: '/akce', title: 'Akce'},
+  { href: '/blog', title: 'Blog'},
   { href: '/partneri', title: 'Partnerské projekty'},
   { href: '/kontakty', title: 'Kontakt'},
   { href: '/admin-login', title: 'Admin modul'}
