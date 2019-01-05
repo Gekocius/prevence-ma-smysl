@@ -113,6 +113,7 @@ export class AdminExaminationRaw extends Component {
           onChange = {this.props.changeExaminationState}
           perbasicValue = {this.props.perbasic}
           perextValue = {this.props.perext}
+          genderValue = {this.props.gender}
           />
           <Row>
             <Col xs="4">

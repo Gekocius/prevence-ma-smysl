@@ -7,7 +7,13 @@ export class AdminAdvanced extends Component {
     return (
       <div>
         <Row>
-          <Col><AdminAdvancedFilterContainer/></Col>
+          <Col>
+            <AdminAdvancedFilterContainer
+            onChange = {this.props.changeExaminationState}
+            agefromextValue = {this.props.agefromext}
+            ageuntilextValue = {this.props.ageuntilext}
+            />
+          </Col>
         </Row>
       </div>
     );
