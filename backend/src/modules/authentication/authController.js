@@ -8,12 +8,12 @@ export const authController = async (req, res) => {
     
     if (!adminUser) {
         // wrong user
-        res.redirect('/admin-login')
+        res.sendStatus(403)
     } else if (!validPass(pass, adminUser.Password)) {
         // wrong pass
-        res.redirect('/admin-login')
+        res.sendStatus(403)
     } else {
-        res.redirect('/admin-lp')
+        res.sendStatus(200)
     }
 }
 

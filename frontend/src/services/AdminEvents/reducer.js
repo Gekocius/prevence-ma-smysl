@@ -11,18 +11,18 @@ import {CREATE_EVENT, CREATE_EVENT_SUCCESS, CREATE_EVENT_FAILURE,
     CHANGE_EVENT_STATE} from './actions';
 
 const initialState = {
-    name: null,
-    description: null,
-    street: null,
-    num: null,
-    city: null,
-    zip: null,
+    name: '',
+    description: '',
+    street: '',
+    num: '',
+    city: '',
+    zip: '',
     date: null,
     time: null,
     price: null,
-    url: null,
+    url: '',
     events: null,
-    response: null
+    response: ''
 }
 
 const adminEventsReducer = (state = initialState, action) => {
