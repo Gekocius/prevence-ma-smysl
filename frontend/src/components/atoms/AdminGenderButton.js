@@ -21,8 +21,6 @@ export class AdminGenderButtonRaw extends Component {
     this.setState({ rSelected },
       () => this.props.setGender(this.state.rSelected)
       );
-
-    console.log(this.state);
   }
 
   render() {

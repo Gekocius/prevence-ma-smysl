@@ -99,7 +99,7 @@ export const startFetchFilteredExaminations = () => (dispatch, getState, { api }
         .get(`examination/${gender}/${age}`)
         .then(({ data }) => {
           const {exams} = data;
-          console.log(data);
+    
           dispatch(fetchFilteredExaminationSuccess(exams));
         })
         .then(() => {window.location.href = '/vysetreni';})

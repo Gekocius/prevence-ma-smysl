@@ -4,7 +4,6 @@ import { Button} from 'reactstrap';
 export class LoginButton extends Component {
   constructor(props){
     super(props);
-    console.log('Binding');
     this.onClickFunc = props.onClickFunc;
   }
   render() {

@@ -11,7 +11,6 @@ export class PartnersRaw extends Component {
 
   render() {
     this.data = this.props.partners;
-    console.log(this.props.partners);
     return (
     <div>
           {this.data.map((item, i) => (

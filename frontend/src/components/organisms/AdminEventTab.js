@@ -12,7 +12,7 @@ export class AdminEventTabRaw extends Component {
 
   render() {
     const { events } = this.props;
-    console.log(this.props);
+
     return (
       <Table hover>
         <thead>
@@ -28,7 +28,7 @@ export class AdminEventTabRaw extends Component {
             <tr key={item.IDEvent}>
               <th scope="row">{item.IDEvent}</th>
               <td>{item.Name}</td>
-            
+
               <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit tuto událost?')) this.props.startDeleteEvent(item.IDEvent)}} className="material-icons" id="cssFooterArrow">delete</i></td>
             </tr>
           ))}

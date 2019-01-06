@@ -11,14 +11,14 @@ export class AdminArticleTabRaw extends Component {
   }
   render() {
     const { articles } = this.props;
-    console.log(this.props);
+
     return (
       <Table hover>
         <thead>
           <tr>
             <th>#</th>
             <th>Název článku</th>
-        
+
             <th>Odstranit</th>
           </tr>
         </thead>

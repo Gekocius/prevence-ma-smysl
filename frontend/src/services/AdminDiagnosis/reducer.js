@@ -22,7 +22,6 @@ const initialState = {
 const adminDiagnosisReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_DIAGNOSIS_STATE:
-            console.log(action.payload.diagParams);
             return {...state, ...action.payload.diagParams }
 
         case SET_D_NAME:

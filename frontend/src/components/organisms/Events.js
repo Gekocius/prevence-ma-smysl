@@ -13,7 +13,6 @@ export class EventsRaw extends Component {
 
   render() {
     const { events } = this.props;
-    console.log(this.props);
 
     return (
       <div id="events">

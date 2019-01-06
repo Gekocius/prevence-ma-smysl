@@ -28,7 +28,6 @@ const initialState = {
 const adminEventsReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_EVENT_STATE:
-            console.log(action.payload.eventParams);
             return {...state, ...action.payload.eventParams }
 
         case SET_E_NAME:

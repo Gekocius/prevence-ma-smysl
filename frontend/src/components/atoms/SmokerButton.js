@@ -16,8 +16,6 @@ export class SmokerButtonRaw extends Component {
     this.setState({ rSelected },
       () => this.props.setLifestyle(this.state.rSelected)
       );
-
-    console.log(JSON.stringify(this.state.rSelected));
   }
   render() {
     return (

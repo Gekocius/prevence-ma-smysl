@@ -37,7 +37,7 @@ export const startFetchTwitterFeed= () => (dispatch, getState, { api }) => {
     api
     .get('twitterfeed/list')
     .then(({ data }) => {
-        console.log(data);
+
       dispatch(fetchTwitterFeedSuccess(data));
     })
   }

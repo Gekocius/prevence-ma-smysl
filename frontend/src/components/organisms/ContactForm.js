@@ -23,7 +23,7 @@ export class ContactFormRaw extends Component {
   handleChange(event){
     let data = {};
     data[event.target.name] = event.target.value;
-    console.log(data);
+
     this.props.changeFormState(data);
   }
 

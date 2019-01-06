@@ -47,7 +47,6 @@ export class LoginForm extends Component {
   }
 
   signUp() {
-    console.log('this.state', this.state);
     this.nameRequired();
     this.passRequired();
   }

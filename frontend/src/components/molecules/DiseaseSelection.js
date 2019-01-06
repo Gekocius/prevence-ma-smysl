@@ -10,7 +10,6 @@ export class DiseaseSelectionRaw extends Component {
 
   handleChange = (selectedOption) => {
     this.props.setDisease(selectedOption);
-    console.log(`Option selected:`, selectedOption);
   }
 
   render() {

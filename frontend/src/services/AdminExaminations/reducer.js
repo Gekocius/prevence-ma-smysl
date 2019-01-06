@@ -34,7 +34,6 @@ const initialState = {
 const adminExamsReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_EXAMINATION_STATE:
-            console.log(action.payload.examParams);
             return {...state, ...action.payload.examParams }
 
         case SET_E_NAME:

@@ -11,7 +11,7 @@ export class AdminIndiTabRaw extends Component {
     }
   render() {
     const { indication } = this.props;
-    console.log(this.props);
+
     return (
       <Table hover>
         <thead>
@@ -29,7 +29,7 @@ export class AdminIndiTabRaw extends Component {
               <th scope="row">{item.IDIndication}</th>
               <td>{item.NameInd}</td>
               <td>{item.Type}</td>
-              
+
               <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit tuto indikaci?')) this.props.startDeleteIndication(item.IDIndication)}} className="material-icons" id="cssFooterArrow">delete</i></td>
             </tr>
           ))}

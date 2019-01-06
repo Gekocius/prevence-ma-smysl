@@ -11,7 +11,7 @@ export class AdminStoryTabRaw extends Component {
   }
   render() {
     const { stories } = this.props;
-    console.log(this.props);
+
     return (
       <Table hover>
         <thead>

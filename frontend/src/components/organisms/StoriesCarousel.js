@@ -32,7 +32,6 @@ export class StoriesCarouselRaw extends Component {
 
   render() {
     const { stories } = this.props;
-    console.log(this.props);
 
         const settings = {
           infinite: true,

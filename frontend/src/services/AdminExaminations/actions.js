@@ -185,7 +185,7 @@ export const createExaminationFailure = error => ({
 
 export const startCreateExamination = () => (dispatch, getState, { api }) => {
     let examState = getState().adminExams;
-    console.log(examState);
+
     let body = {  ExamName: examState.name,
                   Description: examState.description,
                   AgeFrom_basic: examState.agefrombasic,

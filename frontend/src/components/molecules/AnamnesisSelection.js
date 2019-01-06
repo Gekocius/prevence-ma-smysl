@@ -23,7 +23,6 @@ export class AnamnesisSelectionRaw extends Component {
 
   handleChange = (selectedOption) => {
     this.props.setAnamnesis(selectedOption);
-    console.log(`Option selected:`, selectedOption);
   }
 
   render() {

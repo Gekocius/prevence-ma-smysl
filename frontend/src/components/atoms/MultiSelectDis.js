@@ -13,7 +13,6 @@ export class MultiSelectDis extends Component {
   }
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
   }
 
 

@@ -32,7 +32,6 @@ export class PartnersCarouselRaw extends Component {
 
   render() {
     this.data = this.props.partners;
-    console.log(this.props.partners);
 
     const settings = {
       infinite: true,

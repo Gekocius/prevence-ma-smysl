@@ -25,13 +25,11 @@ class MultiPartnersRaw extends Component {
     let diagName = []
     for (const diagnosis of this.props.diagnosis) {
       diagName.push({label: diagnosis.Name, value: diagnosis.Name});
-      console.log(diagName);
     }
     return diagName;
   }
 
   render() {
-    console.log(this.props.diagnosis);
 
     return (
         <MultiSelectP

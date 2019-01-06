@@ -107,7 +107,6 @@ export const createDiagnosisFailure = error => ({
 
 export const startCreateDiagnosis = () => (dispatch, getState, { api }) => {
     let diagState = getState().adminDiagnosis;
-    console.log(diagState);
     let body = {Name: diagState.name, Description: diagState.Description};
   dispatch(createDiagnosis());
   api

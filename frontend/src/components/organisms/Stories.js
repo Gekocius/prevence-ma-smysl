@@ -16,8 +16,6 @@ export class StoriesRaw extends Component {
 
   render() {
     const { stories } = this.props;
-    console.log(this.props.twitterFeed);
-    console.log(this.props);
 
     return (
       <div id="stories">

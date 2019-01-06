@@ -34,7 +34,6 @@ export class EventsCarouselRaw extends Component {
 
   render() {
     const { events } = this.props;
-    console.log(this.props);
 
         const settings = {
           dots: true,

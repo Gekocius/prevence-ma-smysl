@@ -27,8 +27,6 @@ export class AnamnesisBox extends Component {
       this.state.cSelected.splice(index, 1);
     }
     this.setState({ cSelected: [...this.state.cSelected] });
-
-    console.log(JSON.stringify(this.state.cSelected));
   }
 
   render() {
