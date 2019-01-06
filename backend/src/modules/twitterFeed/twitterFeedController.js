@@ -11,7 +11,7 @@ const oauth = OAuth({
   });
 
 const requestData = {
-    url: 'https://api.twitter.com/1.1/collections/entries.json?id=custom-1079370365640544256',
+    url: 'https://api.twitter.com/1.1/collections/entries.json?id=custom-1079370365640544256&tweet_mode=extended',
     method: 'GET'
 }
 const token  = {
@@ -30,11 +30,10 @@ export const twitterFeedController = async (req, res) => {
             if (tweets.hasOwnProperty(key)) {
                 let tweet = tweets[key];
                 let regex = /https:\/\/t\.co\/.*/g
-                let text = tweet.text.replace(regex, '');
+                let text = tweet.full_text.replace(regex, '');
                 let src = './images/defaultTweet.jpg';
                 if (tweet.entities.media) {
                     src = tweet.entities.media[0].media_url;
-                    console.log(src);
                 }
                 response.push({id: tweet.id, 
                     text: text, 
