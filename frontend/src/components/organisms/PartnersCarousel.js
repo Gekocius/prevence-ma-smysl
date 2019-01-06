@@ -1,15 +1,20 @@
-import React, { Component } from "react";
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Col, Card, CardImg, CardBody, CardTitle } from 'reactstrap';
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import '../atoms/Carousel.css';
-import {startFetchFilteredPartners} from '../../services/Partners/actions'
+import { startFetchFilteredPartners } from '../../services/Partners/actions';
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <i className="material-icons" style={{margin: '10px', color: '#026977'}}>arrow_forward_ios</i>
+      <i
+        className="material-icons"
+        style={{ margin: '10px', color: '#026977' }}
+      >
+        arrow_forward_ios
+      </i>
     </div>
   );
 }
@@ -18,15 +23,18 @@ function SamplePrevArrow(props) {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <i className="material-icons" style={{margin: '10px', color: '#026977'}}>arrow_back_ios</i>
+      <i
+        className="material-icons"
+        style={{ margin: '10px', color: '#026977' }}
+      >
+        arrow_back_ios
+      </i>
     </div>
   );
 }
 
-
 export class PartnersCarouselRaw extends Component {
-
-  componentDidMount(){
+  componentDidMount() {
     this.props.startFetchFilteredPartners();
   }
 
@@ -50,54 +58,65 @@ export class PartnersCarouselRaw extends Component {
             slidesToShow: 3,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
-          }
+            dots: true,
+          },
         },
         {
           breakpoint: 840,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 1
-          }
+            slidesToScroll: 1,
+          },
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
 
     return (
       <div>
         <h4> Partneské projekty </h4>
         <Slider {...settings}>
-          {this.data.map ( item => (
-            <Col key={ item.Name }> 
+          {this.data.map(item => (
+            <Col key={item.Name}>
               <Card id="cssCardPartners">
-                  <a href={`/partneri/#${item.IDEvent}`}><CardImg key={item.LogoAlt} top width="240px" src={item.Logo} alt={item.LogoAlt} /></a>
+                <a href={`/partneri/#${item.IDEvent}`}>
+                  <CardImg
+                    key={item.LogoAlt}
+                    top
+                    width="240px"
+                    src={item.Logo}
+                    alt={item.LogoAlt}
+                  />
+                </a>
                 <CardBody>
-                  <CardTitle key={item.IDEvent} style={{color: 'black'}}>{item.Name}</CardTitle>
+                  <CardTitle key={item.IDEvent} style={{ color: 'black' }}>
+                    {item.Name}
+                  </CardTitle>
                 </CardBody>
               </Card>
             </Col>
           ))}
         </Slider>
       </div>
-
     );
   }
 }
 
-
-const mapStateToProps = (state) => ({
-  partners: state.filterPartner.partners
+const mapStateToProps = state => ({
+  partners: state.filterPartner.partners,
 });
 
 const mapDispatchToProps = {
-  startFetchFilteredPartners
-}
+  startFetchFilteredPartners,
+};
 
-export const PartnersCarousel = connect(mapStateToProps, mapDispatchToProps)(PartnersCarouselRaw);
+export const PartnersCarousel = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(PartnersCarouselRaw);

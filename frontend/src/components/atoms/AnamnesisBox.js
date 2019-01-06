@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 import { ButtonGroup, Button } from 'reactstrap';
 
 // not imported to the filter
@@ -8,10 +8,10 @@ const data = [
   { id: 2, anamnesis: 'Podvýživa' },
   { id: 3, anamnesis: 'Obezita' },
   { id: 4, anamnesis: 'Vegan' },
-]
+];
 
 export class AnamnesisBox extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = { cSelected: [] };
@@ -34,12 +34,18 @@ export class AnamnesisBox extends Component {
     return (
       <div>
         <ButtonGroup>
-        {data.map (item => (
-            <Button key={item.id} outline color="info" size="sm" onClick={() => this.onCheckboxBtnClick(item.id)} active={cSelected.includes(item.id)}>
+          {data.map(item => (
+            <Button
+              key={item.id}
+              outline
+              color="info"
+              size="sm"
+              onClick={() => this.onCheckboxBtnClick(item.id)}
+              active={cSelected.includes(item.id)}
+            >
               item.anamnesis
             </Button>
           ))}
-
         </ButtonGroup>
       </div>
     );

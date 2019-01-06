@@ -1,29 +1,28 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import  { MultiSelect } from './MultiSelect';
+import { MultiSelect } from './MultiSelect';
 import { getAdminDiagnosis } from '../../services/AdminDiagnosis/reducer';
 import { startFetchDiagnosis } from '../../services/AdminDiagnosis/actions';
 
 export class MultiSelectDiagRaw extends Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.startFetchDiagnosis();
   }
 
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.getDiagName = this.getDiagName.bind(this);
   }
 
-  getDiagName(){
-    let diagName = []
+  getDiagName() {
+    let diagName = [];
     for (const diagnosis of this.props.diagnosis) {
-      diagName.push({label: diagnosis.Name, value: diagnosis.Name});
+      diagName.push({ label: diagnosis.Name, value: diagnosis.Name });
     }
     return diagName;
   }
 
   render() {
-
     return (
       <MultiSelect
         value={this.props.selectedOption}
@@ -37,17 +36,19 @@ export class MultiSelectDiagRaw extends Component {
   }
 }
 
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const diagnosis = getAdminDiagnosis(state.adminDiagnosis);
 
   return {
-    diagnosis
+    diagnosis,
   };
 };
 
 const mapDispatchToProps = {
-  startFetchDiagnosis
+  startFetchDiagnosis,
 };
 
-export const MultiSelectDiag = connect(mapStateToProps, mapDispatchToProps)(MultiSelectDiagRaw);
+export const MultiSelectDiag = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MultiSelectDiagRaw);

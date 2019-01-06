@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import authRoutes from './modules/authentication/authRoutes'
+import authRoutes from './modules/authentication/authRoutes';
 import examRoutes from './modules/examination/examRoutes';
 import diagnosisRoutes from './modules/diagnosis/diagnosisRoutes';
 import partnerRoutes from './modules/partners/partnerRoutes';
@@ -28,7 +28,7 @@ router.use('/api/indication', indicationRoutes);
 router.use('/api/article', articleRoutes);
 router.use('/api/event', eventRoutes);
 router.use('/api/question', questionRoutes);
-router.use('/api/twitterfeed', twitterFeedRoutes)
+router.use('/api/twitterfeed', twitterFeedRoutes);
 router.use('/api/diagindic', diagIndicRoutes);
 router.use('/api/diagpartner', diagPartnerRoutes);
 router.use('/api/examdiag', examDiagRoutes);

@@ -1,13 +1,10 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 import { Button, ButtonGroup, Label } from 'reactstrap';
 
-const data = [
-  { id: 1, gender: 'Ano' },
-  { id: 2, gender: 'Ne' }
-]
+const data = [{ id: 1, gender: 'Ano' }, { id: 2, gender: 'Ne' }];
 
 export class YesNoButton extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = { cSelected: [] };
@@ -19,23 +16,30 @@ export class YesNoButton extends Component {
     this.setState({ rSelected });
   }
 
-
   render() {
-    const { rSelected } = this.state
+    const { rSelected } = this.state;
     return (
-
       <div>
-      <div>
-        <Label for="exampleText">Má vliv rodinná anamnéza?</Label>
-      </div>
-      <div>
-        <ButtonGroup>
-          {data.map (item => (
-            <Button key={item.id} outline color="info" size="sm" id="genderB" style={{width: '50px'}} onClick={() => this.onRadioBtnClick( item.id )} active={rSelected ===  item.id }>
-              { item.gender }
-            </Button>
-          ))}
-        </ButtonGroup>
+        <div>
+          <Label for="exampleText">Má vliv rodinná anamnéza?</Label>
+        </div>
+        <div>
+          <ButtonGroup>
+            {data.map(item => (
+              <Button
+                key={item.id}
+                outline
+                color="info"
+                size="sm"
+                id="genderB"
+                style={{ width: '50px' }}
+                onClick={() => this.onRadioBtnClick(item.id)}
+                active={rSelected === item.id}
+              >
+                {item.gender}
+              </Button>
+            ))}
+          </ButtonGroup>
         </div>
       </div>
     );

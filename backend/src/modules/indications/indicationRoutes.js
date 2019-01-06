@@ -2,13 +2,13 @@ import expressAsyncAwait from 'express-async-await';
 import { Router } from 'express';
 
 import {
-    indicationController,
-    newIndicationController,
-    deleteIndicationController,
-    updateIndicationController,
-    indicationTreatmentController,
-    indicationFanamnesisController,
-    indicationLifestyleController
+  indicationController,
+  newIndicationController,
+  deleteIndicationController,
+  updateIndicationController,
+  indicationTreatmentController,
+  indicationFanamnesisController,
+  indicationLifestyleController,
 } from './indicationController';
 
 const router = expressAsyncAwait(Router());

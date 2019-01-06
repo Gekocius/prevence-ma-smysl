@@ -1,17 +1,16 @@
-import React, { Component } from "react"
+import React, { Component } from 'react';
 
-import {  FormGroup, Form, Label, Input } from 'reactstrap';
+import { FormGroup, Form, Label, Input } from 'reactstrap';
 
 export class PatientName extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
-    this.setState({value: e.target.value});
-    this.props.onChange({name: e.target.value});
-
+    this.setState({ value: e.target.value });
+    this.props.onChange({ name: e.target.value });
   }
 
   render() {
@@ -19,9 +18,10 @@ export class PatientName extends Component {
       <Form>
         <FormGroup>
           <Label>Jméno pacienta</Label>
-          <Input type="text"
+          <Input
+            type="text"
             value={this.props.value}
-            onChange={e => (this.handleChange(e))}
+            onChange={e => this.handleChange(e)}
           />
         </FormGroup>
       </Form>

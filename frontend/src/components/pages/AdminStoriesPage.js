@@ -1,16 +1,16 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
-import {Heading} from '../atoms/Heading';
-import {NewStoryButton} from '../atoms/NewStoryButton';
-import {AdminNav} from '../organisms/AdminNav';
-import {AdminStoryTab} from '../organisms/AdminStoryTab';
+import { Heading } from '../atoms/Heading';
+import { NewStoryButton } from '../atoms/NewStoryButton';
+import { AdminNav } from '../organisms/AdminNav';
+import { AdminStoryTab } from '../organisms/AdminStoryTab';
 
 export class AdminStoriesPage extends Component {
   render() {
     return (
       <div>
-        <AdminNav/>
+        <AdminNav />
         <Container>
           <Row>
             <Col>
@@ -18,13 +18,15 @@ export class AdminStoriesPage extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md="9"></Col>
+            <Col md="9" />
             <Col md="3">
-              <a href="/admin-pribehy"><NewStoryButton/></a>
+              <a href="/admin-pribehy">
+                <NewStoryButton />
+              </a>
             </Col>
           </Row>
           <Row>
-            <AdminStoryTab/>
+            <AdminStoryTab />
           </Row>
         </Container>
       </div>

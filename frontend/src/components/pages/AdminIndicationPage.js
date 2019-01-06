@@ -1,16 +1,16 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
-import {Heading} from '../atoms/Heading';
-import {NewIndicationButton} from '../atoms/NewIndicationButton';
-import {AdminNav} from '../organisms/AdminNav';
-import {AdminIndiTab} from '../organisms/AdminIndiTab';
+import { Heading } from '../atoms/Heading';
+import { NewIndicationButton } from '../atoms/NewIndicationButton';
+import { AdminNav } from '../organisms/AdminNav';
+import { AdminIndiTab } from '../organisms/AdminIndiTab';
 
 export class AdminIndicationPage extends Component {
   render() {
     return (
       <div>
-        <AdminNav/>
+        <AdminNav />
         <Container>
           <Row>
             <Col>
@@ -18,13 +18,15 @@ export class AdminIndicationPage extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md="9"></Col>
+            <Col md="9" />
             <Col md="3">
-              <a href="/admin-indikace"><NewIndicationButton/></a>
+              <a href="/admin-indikace">
+                <NewIndicationButton />
+              </a>
             </Col>
           </Row>
           <Row>
-            <AdminIndiTab/>
+            <AdminIndiTab />
           </Row>
         </Container>
       </div>

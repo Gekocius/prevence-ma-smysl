@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import  { MultiSelect } from './MultiSelect';
+import React, { Component } from 'react';
+import { MultiSelect } from './MultiSelect';
 
 export class MultiSelectAna extends Component {
   render() {

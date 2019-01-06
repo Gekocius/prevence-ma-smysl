@@ -12,13 +12,11 @@ app.disable('etag');
 
 app.use(rootRouter);
 
-
- app.get('/api/hello', (req, res) => {
-   res.send({ express: 'Hello From Express' });
- });
-
+app.get('/api/hello', (req, res) => {
+  res.send({ express: 'Hello From Express' });
+});
 
 app.use((req, res, next) => {
-    res.status(404);
-    res.json({ error: '404: Stránka nenalezena :(' });
+  res.status(404);
+  res.json({ error: '404: Stránka nenalezena :(' });
 });
