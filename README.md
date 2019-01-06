@@ -1,5 +1,24 @@
 This is a school project that is being developed as a part of 4IT445 classes.
 
+## Requirements:
+node.js v8.12.0 or newer </br>
+yarn 1.9.4 or newer
+
+## How to install:
+Clone using git or download this repository</br>
+Open command line on the root folder</br>
+Navigate to folder frontend</br>
+Use *yarn* or *yarn install command*
+
+## Launching app:
+Use *yarn start* command </br>
+App runs on port 3000 by default</br>
+
+NOTE:</br>
+For App to properly function you also need to run backend
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
