@@ -15,7 +15,6 @@ export class AdminStoriesRaw extends Component {
     this.patientNameRequired = this.patientNameRequired.bind(this);
     this.patientAgeRequired = this.patientAgeRequired.bind(this);
     this.storyDescriptionRequired = this.storyDescriptionRequired.bind(this);
-  //  this.storyRelatedDiagnosisRequired = this.storyRelatedDiagnosisRequired.bind(this);
   }
 
   patientNameRequired() {
@@ -45,17 +44,6 @@ export class AdminStoriesRaw extends Component {
     return true;
   }
 
-/*
-  storyRelatedDiagnosisRequired() {
-    let empt = this.props.selectedDiagnosis;
-     if (empt.length === 0) {
-         console.log(empt)
-         alert("Vyplňte související diagnózy!");
-         return false;
-      }
-    return true;
-  }
-  */
 
   submitStory(){
     if(this.patientNameRequired() && this.patientAgeRequired() && this.storyDescriptionRequired())

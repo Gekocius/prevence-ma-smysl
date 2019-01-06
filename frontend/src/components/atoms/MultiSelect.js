@@ -21,13 +21,11 @@ export const MultiSelect = props => {
       },
       multiValue: (styles, { data }) => {
         return {  ...styles,
-        //  backgroundColor: 'red',
           fontSize: '12px'
         };
       },
       multiValueLabel: (styles, { data }) => ({  ...styles,
         color: data.color,
-        // backgroundColor: 'green',
       }),
       multiValueRemove: (styles, { data }) => ({ ...styles,
         color: data.color,

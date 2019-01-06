@@ -6,7 +6,6 @@ import Slider from "react-slick";
 import {getStories} from '../../services/Stories/reducer';
 import {startFetchStories} from '../../services/Stories/actions'
 
-/* Custom arrows */
 function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
@@ -36,7 +35,6 @@ export class StoriesCarouselRaw extends Component {
     console.log(this.props);
 
         const settings = {
-          dots: true,
           infinite: true,
           speed: 1500,
           autoplay: true,

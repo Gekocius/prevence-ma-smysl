@@ -40,7 +40,7 @@ export class Examination extends Component {
               <Col>
                 <p style={{ 'textAlign': 'right'}}>
                 <Badge id="cssBadgePeriodicity" style={{'marginBottom': '4px' }}>{this.props.data.Periodicity_ext}</Badge>{' '}
-                { /* <i class="material-icons" style={{ color: "#39B2C3", 'marginLeft': '6px' }}>more_horiz</i> */ }
+              
                 </p>
               </Col>
             </Row>

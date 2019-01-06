@@ -82,5 +82,3 @@ export class HelloPage extends Component {
     </div>);
   }
 }
-
-// bgHeight={'1080px'} bgWidth={'1920px'}

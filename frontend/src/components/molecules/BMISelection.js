@@ -28,14 +28,6 @@ export class BMISelectionRaw extends Component {
 
     var resultBMI = Math.round(weight / Math.pow(height, 2) * 100000) / 10;
     return resultBMI;
-/*    if (resultBMI < 18.5)
-          "Underweight";
-      else if (resultBMI >= 18.5 && resultBMI <= 25)
-          "Normal";
-      else if (resultBMI >= 25 && resultBMI <= 30)
-          "Obese";
-      else if (resultBMI > 30)
-          "Overweight";        */
   }
 
 
