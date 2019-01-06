@@ -18,7 +18,6 @@ export class MultiSelectDiagRaw extends Component {
     let diagName = []
     for (const diagnosis of this.props.diagnosis) {
       diagName.push({label: diagnosis.Name, value: diagnosis.Name});
-      console.log(diagName);
     }
     return diagName;
   }

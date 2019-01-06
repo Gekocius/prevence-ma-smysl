@@ -6,7 +6,7 @@ import {SET_LIFESTYLE} from './actions';
 import {SET_HEIGHT} from './actions';
 import {SET_WEIGHT} from './actions';
 import {FETCH_FILTERED_EXAMINATION,
-    FETCH_FILTERED_EXAMINATION_SUCCESS, 
+    FETCH_FILTERED_EXAMINATION_SUCCESS,
     FETCH_FILTERED_EXAMINATION_FAILURE} from './actions';
 
 const initialState = {
@@ -47,7 +47,7 @@ const filtrationReducer = (state = initialState, action) => {
             return { ...state, error: null }
 
         case FETCH_FILTERED_EXAMINATION_SUCCESS:
-        console.log(action.payload.examinations);
+    
             return { ...state, error: null, examinations: action.payload.examinations }
 
         case FETCH_FILTERED_EXAMINATION_FAILURE:
@@ -56,6 +56,6 @@ const filtrationReducer = (state = initialState, action) => {
         default:
             return state
     }
-} 
+}
 
 export default filtrationReducer;

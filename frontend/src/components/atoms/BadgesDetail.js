@@ -42,10 +42,3 @@ export class BadgesDetail extends Component {
     );
   }
 }
-
-
-/* After modal body can be
-<ModalFooter>
-  <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-</ModalFooter>
-*/

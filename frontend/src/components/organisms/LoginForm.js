@@ -44,7 +44,6 @@ export class LoginForm extends Component {
       })
       .catch(()=>{window.location.href = 'admin-login'});
     }
-
   }
 
   render() {

@@ -17,8 +17,6 @@ export class YesNoButton extends Component {
 
   onRadioBtnClick(rSelected) {
     this.setState({ rSelected });
-
-    console.log(JSON.stringify(this.state.rSelected));
   }
 
 

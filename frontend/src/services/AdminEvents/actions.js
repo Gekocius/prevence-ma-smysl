@@ -162,7 +162,6 @@ export const createEventFailure = error => ({
 
 export const startCreateEvent = () => (dispatch, getState, { api }) => {
     let eventState = getState().adminEvents;
-    console.log(eventState);
     let body = {Name: eventState.name,
                 Description: eventState.description,
                 Date: eventState.date,

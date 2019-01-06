@@ -43,11 +43,10 @@ export class AdminDiagnosisRaw extends Component {
       }
     return true;
   }
-  
+
   diagRelatedExamsRequired() {
     let empt = this.props.selectedExams;
      if (empt.length === 0) {
-         console.log(empt)
          alert("Vyplňte související vyšetření!");
          return false;
       }

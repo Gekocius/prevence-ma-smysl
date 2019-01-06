@@ -12,7 +12,6 @@ export class DiagName extends Component {
   handleChange(e) {
     this.setState({value: e.target.value});
     this.props.onChange({name: e.target.value});
-
   }
 
   render() {

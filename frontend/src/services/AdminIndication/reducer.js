@@ -21,7 +21,7 @@ const initialState = {
 const adminIndicationsReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_INDICATION_STATE:
-            console.log(action.payload.indiParams);
+      
             return {...state, ...action.payload.indiParams }
 
         case SET_I_NAME:

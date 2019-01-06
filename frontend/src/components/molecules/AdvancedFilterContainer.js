@@ -1,6 +1,24 @@
 import React, { Component } from "react"
 import { Jumbotron, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 
+const ana = [
+  { id: '1', title: 'infarkt'},
+  { id: '2', title: 'cévní mozková příhoda'},
+  { id: '3', title: 'karcinom tlustého střeva'},
+  { id: '4', title: 'karcinom prsu'}
+]
+
+const dis = [
+  { id: '1', title: 'hypertenze'},
+  { id: '2', title: 'diabetes'},
+  { id: '3', title: 'poruchy štítné žlázy'}
+]
+
+const lifestyle = [
+  { id: '1', title: 'kuřák'},
+  { id: '2', title: 'obezita'}
+]
+
 export class AdvancedFilterContainer extends Component {
   render() {
   return (
@@ -38,72 +56,42 @@ export class AdvancedFilterContainer extends Component {
         <Col align="left">
           <Form>
             <Label>Rodinná anamnéza</Label>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Karcinom prsu
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Vysoký krevní tlak
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Diabetes
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Dna
-              </Label>
-            </FormGroup>
+            {ana.map ( item => (
+              <FormGroup check>
+                <Label check>
+                  <Input type="checkbox" key={item.id}/>{' '}
+                    {item.title}
+                </Label>
+              </FormGroup>
+            ))}
           </Form>
         </Col>
 
         <Col align="left">
           <Form>
             <Label>Léčím se s</Label>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Vysoký cholesterol
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Diabetes
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Krátkozrakost
-              </Label>
-            </FormGroup>
+              {dis.map ( item => (
+                <FormGroup check>
+                  <Label check>
+                    <Input type="checkbox" key={item.id}/>{' '}
+                      {item.title}
+                  </Label>
+                </FormGroup>
+              ))}
           </Form>
         </Col>
 
         <Col align="left">
           <Form>
             <Label>Životní styl</Label>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Kuřák
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type="checkbox" />{' '}
-                  Obezita
-              </Label>
-            </FormGroup>
+              {lifestyle.map ( item => (
+                <FormGroup check>
+                  <Label check>
+                    <Input type="checkbox" key={item.id}/>{' '}
+                      {item.title}
+                  </Label>
+                </FormGroup>
+              ))}
           </Form>
         </Col>
       </Row>

@@ -9,8 +9,7 @@ const data = [
   { href: '/partneri', title: 'Partnerské projekty'},
   { href: '/kontakty', title: 'Kontakt'},
   { href: '/projekt', title: 'O projektu'},
-  { href: '/blog', title: 'Blog'},
-  { href: '/admin-login', title: 'Admin modul'}
+  { href: '/blog', title: 'Blog'}
 ]
 
 export class Menu extends Component {
@@ -22,12 +21,11 @@ export class Menu extends Component {
       visibility = "show";
     }
 
-  //  const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
-
     return (
       <div id="flyoutMenu" className={visibility}>
-        <a href="#" className="menu-close-button" data-rel="menu-close-button"
-            onMouseDown={handleMouseDown} className={visibility}>
+        <a href="/#" className="menu-close-button" data-rel="menu-close-button"
+            onMouseDown={handleMouseDown}
+        >
 				<MenuButtonClose className="menu-close-button" handleMouseDown={this.handleMouseDown}/> </a>
         {data.map ( item => (
           <a key={item.href} id="cssHamburgerMenu" href={item.href}><p>{item.title}</p></a>

@@ -61,7 +61,6 @@ export class AdminExaminationRaw extends Component {
     examPeriodicityBasicRequired() {
       let empt = this.props.periodicityBasic;
        if (empt.length === 0) {
-           console.log(empt)
            alert("Zvolte základní periodicitu!");
            return false;
         }
@@ -71,7 +70,6 @@ export class AdminExaminationRaw extends Component {
     examRelatedDiagsRequired() {
       let empt = this.props.selectedDiags;
        if (empt === null || empt === undefined) {
-           console.log(empt)
            alert("Zvolte alespoň jednu související diagnózu!");
            return false;
         }
@@ -113,6 +111,7 @@ export class AdminExaminationRaw extends Component {
           onChange = {this.props.changeExaminationState}
           perbasicValue = {this.props.perbasic}
           perextValue = {this.props.perext}
+          genderValue = {this.props.gender}
           />
           <Row>
             <Col xs="4">

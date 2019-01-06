@@ -99,7 +99,7 @@ export const startDeleteIndication = (indiId) => (dispatch, getState, { api }) =
 
  export const startCreateIndication = () => (dispatch, getState, { api }) => {
      let indiState = getState().adminIndications;
-     console.log(indiState);
+
      let body = {NameInd: indiState.name, Type: indiState.type};
    dispatch(createIndication());
    api

@@ -11,14 +11,14 @@ export class AdminExamsTabRaw extends Component {
     }
   render() {
     const { exams } = this.props;
-    console.log(this.props);
+
     return (
       <Table hover>
         <thead>
           <tr>
             <th>#</th>
             <th>Název vyšetření</th>
-            {/* <th>Upravit</th> */}
+
             <th>Odstranit</th>
           </tr>
         </thead>
@@ -27,7 +27,7 @@ export class AdminExamsTabRaw extends Component {
             <tr key={item.IDExamination}>
               <th scope="row">{item.IDExamination}</th>
               <td>{item.ExamName}</td>
-              {/* <td><a href=""><i className="material-icons" id="cssFooterArrow">create</i></a></td> */}
+
               <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit toto vyšetření?')) this.props.startDeleteExam(item.IDExamination)}} className="material-icons" id="cssFooterArrow">delete</i></td>
             </tr>
           ))}

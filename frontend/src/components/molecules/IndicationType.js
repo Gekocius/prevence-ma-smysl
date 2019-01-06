@@ -18,7 +18,6 @@ export class IndicationType extends Component {
   }
 
   handleChange(selectedType) {
-    console.log(selectedType.value);
     this.setState({value: selectedType.value});
     this.props.onChange({type: selectedType.value});
   }

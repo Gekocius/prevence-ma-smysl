@@ -16,7 +16,7 @@ const initialState = {
 const adminStoriesReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_STORY_STATE:
-            console.log(action.payload.storyParams);
+        
             return {...state, ...action.payload.storyParams }
 
         case GET_S_NAME:

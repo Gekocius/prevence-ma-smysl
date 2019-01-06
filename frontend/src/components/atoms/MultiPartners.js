@@ -5,14 +5,6 @@ import { setDiagnosis, startFetchFilteredPartners } from '../../services/Partner
 import { getAdminDiagnosis } from '../../services/AdminDiagnosis/reducer';
 import { startFetchDiagnosis } from '../../services/AdminDiagnosis/actions';
 
-/*
-const options = [
-  { value: 'hypertenze', label: 'hypertenze' },
-  { value: 'diabetes', label: 'diabetes' },
-  { value: 'poruchy štítné žlázy', label: 'poruchy štítné žlázy' }
-];
-*/
-
 class MultiPartnersRaw extends Component {
   componentDidMount(){
     this.props.startFetchDiagnosis();
@@ -33,13 +25,11 @@ class MultiPartnersRaw extends Component {
     let diagName = []
     for (const diagnosis of this.props.diagnosis) {
       diagName.push({label: diagnosis.Name, value: diagnosis.Name});
-      console.log(diagName);
     }
     return diagName;
   }
 
   render() {
-    console.log(this.props.diagnosis);
 
     return (
         <MultiSelectP

@@ -38,16 +38,17 @@ const innerStore = {
     }
     ],
     anamnesisOptions: [
-        { value: 'hypertenze', label: 'hypertenze' },
-        { value: 'diabetes', label: 'diabetes' },
-        { value: 'rakovina', label: 'rakovina' },
-        { value: 'poruchy štítné žlázy', label: 'poruchy štítné žlázy' },
-        { value: 'vyšší cholesterol', label: 'vyšší cholesterol' }
+        { value: 'infarkt', label: 'infarkt' },
+        { value: 'cévní mozková příhoda', label: 'cévní mozková příhoda' },
+        { value: 'karcinom tlustého střeva', label: 'karcinom tlustého střeva' },
+        { value: 'karcinom prsu', label: 'karcinom prsu' }
       ],
     diseaseOptions: [
-        { value: 'hypertenze', label: 'hypertenze' },
-        { value: 'diabetes', label: 'diabetes' },
-        { value: 'poruchy štítné žlázy', label: 'poruchy štítné žlázy' }
+        { value: 'rakovina', label: 'rakovina' },
+        { value: 'vysoký krevní tlak', label: 'vysoký krevní tlak' },
+        { value: 'cukrovka', label: 'cukrovka' },
+        { value: 'poruchy štítné žlázy', label: 'poruchy štítné žlázy' },
+        { value: 'vyšší choresterol', label: 'vyšší choresterol' }
       ]
 }
 

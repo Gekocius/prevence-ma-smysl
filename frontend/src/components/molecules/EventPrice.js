@@ -14,7 +14,6 @@ export class EventPrice extends Component {
   }
 
   handleChange(selectedFee) {
-    console.log(selectedFee.value);
     this.setState({value: selectedFee.value});
     this.props.onChange({price: selectedFee.value});
   }

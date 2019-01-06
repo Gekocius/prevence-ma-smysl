@@ -28,7 +28,6 @@ export class AdminIndicationRaw extends Component {
   indicationTypeRequired() {
     let empt = this.props.type;
      if (empt === null || empt === undefined || empt.length === 0) {
-         console.log(empt)
          alert("Vyplňte typ indikace!");
          return false;
       }

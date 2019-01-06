@@ -5,20 +5,6 @@ import Slider from "react-slick";
 import '../atoms/Carousel.css';
 import {startFetchFilteredPartners} from '../../services/Partners/actions'
 
-// MyCarousel should be used like an atom instead of Slider
-//import { MyCarousel } from '../atoms/MyCarousel';
-
-/*
-const data = [
-  { src: './images/loono_logo.png', href: '/partneri#loono', title: 'Loono', alt: 'Loono logo'},
-  { src: './images/stk_logo.png', href: '/partneri#stk', title: 'STK pro chlapy', alt: 'STK pro chlapy logo'},
-  { src: './images/avon_logo.jpg', href: '/partneri#avon', title: 'Avon', alt: 'Avon logo'},
-  { src: './images/rucenaprsa_logo.jpg', href: '/partneri#rucenaprsa', title: 'Ruce na prsa', alt: 'Ruce na prsa logo'},
-  { src: './images/proti_logo.png', href: '/partneri', title: 'S dětmi proti nadváze', alt: 'S dětmi proti nadváze logo'},
-]
-*/
-
-/* Custom arrows */
 function SampleNextArrow(props) {
   const { className, onClick } = props;
   return (
@@ -46,10 +32,8 @@ export class PartnersCarouselRaw extends Component {
 
   render() {
     this.data = this.props.partners;
-    console.log(this.props.partners);
 
     const settings = {
-    //  dots: true,
       infinite: true,
       speed: 1500,
       autoplay: true,
@@ -91,7 +75,7 @@ export class PartnersCarouselRaw extends Component {
         <h4> Partneské projekty </h4>
         <Slider {...settings}>
           {this.data.map ( item => (
-            <Col>
+            <Col key={ item.Name }> 
               <Card id="cssCardPartners">
                   <a href={`/partneri/#${item.IDEvent}`}><CardImg key={item.LogoAlt} top width="240px" src={item.Logo} alt={item.LogoAlt} /></a>
                 <CardBody>

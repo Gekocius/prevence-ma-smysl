@@ -111,7 +111,7 @@ export const startDeleteStory = (storyId) => (dispatch, getState, { api }) => {
 
  export const startCreateStory = () => (dispatch, getState, { api }) => {
      let storyState = getState().adminStories;
-     console.log(storyState);
+  
      let body = {Name: storyState.name, Age: storyState.age, Description: storyState.description};
    dispatch(createStory());
    api

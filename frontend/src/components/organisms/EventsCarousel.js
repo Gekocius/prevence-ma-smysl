@@ -34,7 +34,6 @@ export class EventsCarouselRaw extends Component {
 
   render() {
     const { events } = this.props;
-    console.log(this.props);
 
         const settings = {
           dots: true,
@@ -79,7 +78,7 @@ export class EventsCarouselRaw extends Component {
         <h4>Akce, které se v budoucnu budou konat</h4>
         <Slider {...settings}>
           {events.map ( item => (
-            <Col>
+            <Col key={ item.Name }>
               <Card id="cssCardStories" body>
                 <CardTitle>
                   <a href={`/akce/#${item.IDEvent}`} className="storiesCarousel" style={{color: '#026977'}}>{ item.Name }</a>
