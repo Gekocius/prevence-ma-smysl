@@ -75,7 +75,7 @@ export class StoriesCarouselRaw extends Component {
         <h4>Příběhy těch, kterým prevence zachránila život</h4>
         <Slider {...settings}>
           {stories.map ( item => (
-            <Col>
+            <Col key={ item.Name }>
               <Card id="cssCardStories" body>
                 <CardTitle>{ item.Name }, { item.Age }</CardTitle>
                 <CardText>

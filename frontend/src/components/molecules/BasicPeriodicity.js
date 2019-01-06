@@ -11,9 +11,6 @@ const options = [
 ];
 
 export class BasicPeriodicity extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     return (

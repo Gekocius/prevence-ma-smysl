@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Col, Row, Button, UncontrolledTooltip } from 'reactstrap';
+import { Col, Row, UncontrolledTooltip } from 'reactstrap';
 
 import {AdminNav} from '../organisms/AdminNav';
 

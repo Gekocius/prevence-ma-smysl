@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'reactstrap';
 import {Parallax} from 'react-parallax';
 
 import {TopNav} from '../molecules/TopNav';
-import {MultiPartners} from '../atoms/MultiPartners';
 import {Footer} from '../organisms/Footer';
 import {Article} from "../organisms/Article";
 

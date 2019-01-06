@@ -49,7 +49,7 @@ export class StoriesRaw extends Component {
                       style={{maxWidth: '266px', minWidth: '240px', margin: '10px'}}
                 >
                   <img  src={ item.src }
-                        style={{maxWidth: '266px', minWidth: '240px', marginTop: '10px'}}></img>
+                        style={{maxWidth: '266px', minWidth: '240px', marginTop: '10px'}} alt=""></img>
                   <div className="overlay">
                     <div className="text">
                         <p id="cssStoriesParagraph" style={{color: 'black', textAlign: 'justify', width: 'auto',

@@ -75,7 +75,7 @@ export class PartnersCarouselRaw extends Component {
         <h4> Partneské projekty </h4>
         <Slider {...settings}>
           {this.data.map ( item => (
-            <Col>
+            <Col key={ item.Name }> 
               <Card id="cssCardPartners">
                   <a href={`/partneri/#${item.IDEvent}`}><CardImg key={item.LogoAlt} top width="240px" src={item.Logo} alt={item.LogoAlt} /></a>
                 <CardBody>

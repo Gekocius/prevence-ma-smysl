@@ -23,8 +23,9 @@ export class Menu extends Component {
 
     return (
       <div id="flyoutMenu" className={visibility}>
-        <a href="#" className="menu-close-button" data-rel="menu-close-button"
-            onMouseDown={handleMouseDown} className={visibility}>
+        <a href="/#" className="menu-close-button" data-rel="menu-close-button"
+            onMouseDown={handleMouseDown}
+        >
 				<MenuButtonClose className="menu-close-button" handleMouseDown={this.handleMouseDown}/> </a>
         {data.map ( item => (
           <a key={item.href} id="cssHamburgerMenu" href={item.href}><p>{item.title}</p></a>
