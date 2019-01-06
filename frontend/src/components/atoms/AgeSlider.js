@@ -11,7 +11,6 @@ export class AgeSliderRaw extends Component {
   }
 
   handleChange(event){
-    //this.setState({value: event.target.value});
     this.props.setAge(event.target.value);
   }
 

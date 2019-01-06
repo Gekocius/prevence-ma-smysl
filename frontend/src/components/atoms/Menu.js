@@ -9,8 +9,7 @@ const data = [
   { href: '/partneri', title: 'Partnerské projekty'},
   { href: '/kontakty', title: 'Kontakt'},
   { href: '/projekt', title: 'O projektu'},
-  { href: '/blog', title: 'Blog'},
-  { href: '/admin-login', title: 'Admin modul'}
+  { href: '/blog', title: 'Blog'}
 ]
 
 export class Menu extends Component {
@@ -21,8 +20,6 @@ export class Menu extends Component {
     if (this.props.menuVisibility) {
       visibility = "show";
     }
-
-  //  const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
 
     return (
       <div id="flyoutMenu" className={visibility}>
