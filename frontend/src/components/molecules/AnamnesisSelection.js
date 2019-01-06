@@ -3,22 +3,13 @@ import {connect} from 'react-redux';
 import {setAnamnesis} from '../../services/Filtration/actions'
 import {MultiSelectAna} from '../atoms/MultiSelectAna';
 import {dumbStore} from '../../store/dumbStore';
-import axios from 'axios';
 
 export class AnamnesisSelectionRaw extends Component {
    options = dumbStore.anamnesisOptions;
 
   constructor(){
     super()
-    this.fillFromDB = this.fillFromDB.bind(this);
     this.options = dumbStore.anamnesisOptions;
-  }
-
-  fillFromDB(){
-    return 'lol';
-     axios.get('http://localhost:3030/api/examination').then((response)=>{
-      dumbStore.anamnesisOptions = response;
-     });
   }
 
   handleChange = (selectedOption) => {
