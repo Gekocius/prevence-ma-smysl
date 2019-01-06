@@ -38,7 +38,7 @@ export const twitterFeedController = async (req, res) => {
                 }
                 response.push({id: tweet.id, 
                     text: text, 
-                    user: users[tweet.user.id].screen_name, 
+                    user: users[tweet.user.id_str].screen_name, 
                     src: src})
             }
         }
