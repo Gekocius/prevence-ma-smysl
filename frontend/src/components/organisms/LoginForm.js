@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Jumbotron} from 'reactstrap';
 import { Input } from 'reactstrap';
 import { LoginButton } from '../atoms/LoginButton';
+import api from '../../api';
 
 
 export class LoginForm extends Component {
@@ -21,35 +22,29 @@ export class LoginForm extends Component {
          alert("Vyplňte přihlašovací jméno!");
          return false;
       }
-      // fejk přihlášení
-     if (empt !== "admin") {
-       alert("Špatné přihlašovací jméno nebo heslo!");
-       return false;
-     }
     return true;
   }
 
   passRequired() {
-      let empt = this.state.password;
-       if (empt === "") {
-           alert("Vyplňte heslo!");
-           return false;
-        }
-        // fejk přihlášení
-       if (empt !== "admin") {
-         alert("Špatné přihlašovací jméno nebo heslo!");
-         return false;
-       }
-       else{
-         window.location.href = '/admin-lp';
-         return true;
-       }
+    let empt = this.state.password;
+    if (empt === "") {
+      alert("Vyplňte heslo!");
+      return false;
+    }
+    return true;
   }
 
   signUp() {
-    console.log('this.state', this.state);
-    this.nameRequired();
-    this.passRequired();
+    if(this.nameRequired() && this.passRequired())
+    {
+      api.get(`/auth/${this.state.username}.${this.state.password}`)
+      .then(({status})=>{
+        if(status === 200)
+        window.location.href = '/admin-lp';
+      })
+      .catch(()=>{window.location.href = 'admin-login'});
+    }
+
   }
 
   render() {
