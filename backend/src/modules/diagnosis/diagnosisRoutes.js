@@ -2,10 +2,10 @@ import expressAsyncAwait from 'express-async-await';
 import { Router } from 'express';
 
 import {
-    diagController,
-    newDiagController,
-    deleteDiagController,
-    updateDiagController,
+  diagController,
+  newDiagController,
+  deleteDiagController,
+  updateDiagController,
 } from './diagnosisController';
 
 const router = expressAsyncAwait(Router());

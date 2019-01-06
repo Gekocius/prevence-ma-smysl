@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Row, Col, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 
 export class BasicFilterContainer extends Component {
@@ -6,7 +6,7 @@ export class BasicFilterContainer extends Component {
     super(props);
     this.state = {
       agefrombasic: '',
-      ageuntilbasic: ''
+      ageuntilbasic: '',
     };
 
     this.handleAgeFromChange = this.handleAgeFromChange.bind(this);
@@ -14,53 +14,53 @@ export class BasicFilterContainer extends Component {
   }
 
   handleAgeFromChange(e) {
-    this.setState({agefrombasic: e.target.value});
-    this.props.onChange({agefrombasic: e.target.value});
+    this.setState({ agefrombasic: e.target.value });
+    this.props.onChange({ agefrombasic: e.target.value });
   }
 
   handleAgeUntilChange(e) {
-    this.setState({ageuntilbasic: e.target.value});
-    this.props.onChange({ageuntilbasic: e.target.value});
+    this.setState({ ageuntilbasic: e.target.value });
+    this.props.onChange({ ageuntilbasic: e.target.value });
   }
 
   render() {
-  return (
-    <Container>
-      <div>
-        <Row>
-          <Col>
-            <Form>
-              <FormGroup>
-                <Label>Věk od:</Label>
-                <Input
-                className="ageInput"
-                type="number"
-                min="18"
-                max="120"
-                value={this.props.agefrombasicValue}
-                onChange={e => (this.handleAgeFromChange(e))}
-                />
-              </FormGroup>
-            </Form>
-          </Col>
-          <Col>
-            <Form>
-              <FormGroup>
-                <Label>Věk do:</Label>
-                <Input
-                className="ageInput"
-                type="number"
-                min="18"
-                max="120"
-                value={this.props.ageuntilbasicValue}
-                onChange={e => (this.handleAgeUntilChange(e))}
-                />
-              </FormGroup>
-            </Form>
-          </Col>
-        </Row>
-      </div>
-    </Container>
-  );
+    return (
+      <Container>
+        <div>
+          <Row>
+            <Col>
+              <Form>
+                <FormGroup>
+                  <Label>Věk od:</Label>
+                  <Input
+                    className="ageInput"
+                    type="number"
+                    min="18"
+                    max="120"
+                    value={this.props.agefrombasicValue}
+                    onChange={e => this.handleAgeFromChange(e)}
+                  />
+                </FormGroup>
+              </Form>
+            </Col>
+            <Col>
+              <Form>
+                <FormGroup>
+                  <Label>Věk do:</Label>
+                  <Input
+                    className="ageInput"
+                    type="number"
+                    min="18"
+                    max="120"
+                    value={this.props.ageuntilbasicValue}
+                    onChange={e => this.handleAgeUntilChange(e)}
+                  />
+                </FormGroup>
+              </Form>
+            </Col>
+          </Row>
+        </div>
+      </Container>
+    );
+  }
 }
-};

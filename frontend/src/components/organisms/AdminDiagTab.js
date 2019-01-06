@@ -1,12 +1,14 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Table} from 'reactstrap';
+import { Table } from 'reactstrap';
 import { getAdminDiagnosis } from '../../services/AdminDiagnosis/reducer';
-import { startFetchDiagnosis, startDeleteDiagnosis } from '../../services/AdminDiagnosis/actions';
+import {
+  startFetchDiagnosis,
+  startDeleteDiagnosis,
+} from '../../services/AdminDiagnosis/actions';
 
 export class AdminDiagTabRaw extends Component {
-
-  componentDidMount(){
+  componentDidMount() {
     this.props.startFetchDiagnosis();
   }
 
@@ -24,12 +26,27 @@ export class AdminDiagTabRaw extends Component {
           </tr>
         </thead>
         <tbody>
-          {diagnosis.map( item => (
+          {diagnosis.map(item => (
             <tr key={item.IDDiagnosis}>
               <th scope="row">{item.IDDiagnosis}</th>
               <td>{item.Name}</td>
 
-              <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit tuto diagnózu?')) this.props.startDeleteDiagnosis(item.IDDiagnosis)}} className="material-icons" id="cssFooterArrow">delete</i></td>
+              <td>
+                <i
+                  onClick={e => {
+                    if (
+                      window.confirm(
+                        'Jste si jistí, že chcete odstranit tuto diagnózu?',
+                      )
+                    )
+                      this.props.startDeleteDiagnosis(item.IDDiagnosis);
+                  }}
+                  className="material-icons"
+                  id="cssFooterArrow"
+                >
+                  delete
+                </i>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -38,7 +55,7 @@ export class AdminDiagTabRaw extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const diagnosis = getAdminDiagnosis(state.adminDiagnosis);
 
   return {
@@ -48,7 +65,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   startFetchDiagnosis,
-  startDeleteDiagnosis
-}
+  startDeleteDiagnosis,
+};
 
-export const AdminDiagTab = connect(mapStateToProps, mapDispatchToProps)(AdminDiagTabRaw);
+export const AdminDiagTab = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(AdminDiagTabRaw);

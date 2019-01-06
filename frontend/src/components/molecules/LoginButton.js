@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import { Button} from 'reactstrap';
+import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 
 export class LoginButton extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.onClickFunc = props.onClickFunc;
   }
@@ -13,7 +13,8 @@ export class LoginButton extends Component {
           id="cssButton"
           color="primary"
           className="login-button"
-          onClick={this.onClickFunc}>
+          onClick={this.onClickFunc}
+        >
           Přihlásit
         </Button>{' '}
       </div>

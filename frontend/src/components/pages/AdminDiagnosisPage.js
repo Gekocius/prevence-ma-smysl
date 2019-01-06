@@ -1,16 +1,16 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
-import {Heading} from '../atoms/Heading';
-import {NewDiagButton} from '../atoms/NewDiagButton';
-import {AdminNav} from '../organisms/AdminNav';
-import {AdminDiagTab} from '../organisms/AdminDiagTab';
+import { Heading } from '../atoms/Heading';
+import { NewDiagButton } from '../atoms/NewDiagButton';
+import { AdminNav } from '../organisms/AdminNav';
+import { AdminDiagTab } from '../organisms/AdminDiagTab';
 
 export class AdminDiagnosisPage extends Component {
   render() {
     return (
       <div>
-        <AdminNav/>
+        <AdminNav />
         <Container>
           <Row>
             <Col>
@@ -18,13 +18,15 @@ export class AdminDiagnosisPage extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md="9"></Col>
+            <Col md="9" />
             <Col md="3">
-              <a href="/admin-diagnozy"><NewDiagButton/></a>
+              <a href="/admin-diagnozy">
+                <NewDiagButton />
+              </a>
             </Col>
           </Row>
           <Row>
-            <AdminDiagTab/>
+            <AdminDiagTab />
           </Row>
         </Container>
       </div>

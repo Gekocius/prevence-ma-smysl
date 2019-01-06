@@ -14,7 +14,6 @@ const persistConfig = {
 export const createRootReducer = () => {
   const rootReducer = combineReducers({
     shoppingCart: shoppingCartReducer,
-
   });
 
   return persistReducer(persistConfig, rootReducer);

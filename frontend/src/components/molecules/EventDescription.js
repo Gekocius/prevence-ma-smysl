@@ -1,15 +1,15 @@
-import React, { Component } from "react"
-import {  FormGroup, Form, Label, Input } from 'reactstrap';
+import React, { Component } from 'react';
+import { FormGroup, Form, Label, Input } from 'reactstrap';
 
 export class EventDescription extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
-    this.setState({value: e.target.value});
-    this.props.onChange({description: e.target.value});
+    this.setState({ value: e.target.value });
+    this.props.onChange({ description: e.target.value });
   }
 
   render() {
@@ -17,13 +17,13 @@ export class EventDescription extends Component {
       <Form>
         <FormGroup>
           <Label for="eventText">Popis akce</Label>
-            <Input
-              type="textarea"
-              name="text"
-              id="eventText"
-              value={this.props.value}
-              onChange={e => (this.handleChange(e))}
-              />
+          <Input
+            type="textarea"
+            name="text"
+            id="eventText"
+            value={this.props.value}
+            onChange={e => this.handleChange(e)}
+          />
         </FormGroup>
       </Form>
     );

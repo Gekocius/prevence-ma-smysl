@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Table} from 'reactstrap';
+import { Table } from 'reactstrap';
 import { getAdminIndication } from '../../services/AdminIndication/reducer';
-import { startFetchIndication, startDeleteIndication } from '../../services/AdminIndication/actions'
+import {
+  startFetchIndication,
+  startDeleteIndication,
+} from '../../services/AdminIndication/actions';
 
 export class AdminIndiTabRaw extends Component {
-
-    componentDidMount(){
-      this.props.startFetchIndication();
-    }
+  componentDidMount() {
+    this.props.startFetchIndication();
+  }
   render() {
     const { indication } = this.props;
 
@@ -24,13 +26,28 @@ export class AdminIndiTabRaw extends Component {
           </tr>
         </thead>
         <tbody>
-          {indication.map( item => (
+          {indication.map(item => (
             <tr key={item.IDIndication}>
               <th scope="row">{item.IDIndication}</th>
               <td>{item.NameInd}</td>
               <td>{item.Type}</td>
 
-              <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit tuto indikaci?')) this.props.startDeleteIndication(item.IDIndication)}} className="material-icons" id="cssFooterArrow">delete</i></td>
+              <td>
+                <i
+                  onClick={e => {
+                    if (
+                      window.confirm(
+                        'Jste si jistí, že chcete odstranit tuto indikaci?',
+                      )
+                    )
+                      this.props.startDeleteIndication(item.IDIndication);
+                  }}
+                  className="material-icons"
+                  id="cssFooterArrow"
+                >
+                  delete
+                </i>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -39,7 +56,7 @@ export class AdminIndiTabRaw extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const indication = getAdminIndication(state.adminIndications);
 
   return {
@@ -49,7 +66,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   startFetchIndication,
-  startDeleteIndication
-}
+  startDeleteIndication,
+};
 
-export const AdminIndiTab = connect(mapStateToProps, mapDispatchToProps)(AdminIndiTabRaw);
+export const AdminIndiTab = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(AdminIndiTabRaw);

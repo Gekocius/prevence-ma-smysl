@@ -21,10 +21,10 @@ export class ExaminationListRaw extends Component {
       </div>
     );
   }
-};
+}
 
-const mapStateToProps = (state) => ({
-  examinations: state.filterState.examinations
+const mapStateToProps = state => ({
+  examinations: state.filterState.examinations,
 });
 
 export const ExaminationList = connect(mapStateToProps)(ExaminationListRaw);

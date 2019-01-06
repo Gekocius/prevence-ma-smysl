@@ -1,16 +1,16 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
-import {Heading} from '../atoms/Heading';
-import {NewEventButton} from '../atoms/NewEventButton';
-import {AdminNav} from '../organisms/AdminNav';
-import {AdminEventTab} from '../organisms/AdminEventTab';
+import { Heading } from '../atoms/Heading';
+import { NewEventButton } from '../atoms/NewEventButton';
+import { AdminNav } from '../organisms/AdminNav';
+import { AdminEventTab } from '../organisms/AdminEventTab';
 
 export class AdminEventPage extends Component {
   render() {
     return (
       <div>
-        <AdminNav/>
+        <AdminNav />
         <Container>
           <Row>
             <Col>
@@ -18,13 +18,15 @@ export class AdminEventPage extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md="9"></Col>
+            <Col md="9" />
             <Col md="3">
-              <a href="/admin-akce"><NewEventButton/></a>
+              <a href="/admin-akce">
+                <NewEventButton />
+              </a>
             </Col>
           </Row>
           <Row>
-            <AdminEventTab/>
+            <AdminEventTab />
           </Row>
         </Container>
       </div>

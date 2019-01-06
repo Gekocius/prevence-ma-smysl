@@ -2,10 +2,10 @@ import expressAsyncAwait from 'express-async-await';
 import { Router } from 'express';
 
 import {
-    eventController,
-    newEventController,
-    deleteEventController,
-    updateEventController,
+  eventController,
+  newEventController,
+  deleteEventController,
+  updateEventController,
 } from './eventController';
 
 const router = expressAsyncAwait(Router());

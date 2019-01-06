@@ -1,17 +1,16 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
-import {Heading} from '../atoms/Heading';
-import {NewExamButton} from '../atoms/NewExamButton';
-import {AdminNav} from '../organisms/AdminNav';
-import {AdminExamsTab} from '../organisms/AdminExamsTab';
-
+import { Heading } from '../atoms/Heading';
+import { NewExamButton } from '../atoms/NewExamButton';
+import { AdminNav } from '../organisms/AdminNav';
+import { AdminExamsTab } from '../organisms/AdminExamsTab';
 
 export class AdminExams extends Component {
   render() {
     return (
       <div>
-        <AdminNav/>
+        <AdminNav />
         <Container>
           <Row>
             <Col>
@@ -19,13 +18,15 @@ export class AdminExams extends Component {
             </Col>
           </Row>
           <Row>
-            <Col md="9"></Col>
+            <Col md="9" />
             <Col md="3">
-              <a href="/admin-vysetreni"><NewExamButton/></a>
+              <a href="/admin-vysetreni">
+                <NewExamButton />
+              </a>
             </Col>
           </Row>
           <Row>
-            <AdminExamsTab/>
+            <AdminExamsTab />
           </Row>
         </Container>
       </div>

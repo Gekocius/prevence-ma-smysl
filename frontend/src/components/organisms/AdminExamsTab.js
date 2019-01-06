@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Table} from 'reactstrap';
+import { Table } from 'reactstrap';
 import { getAdminExams } from '../../services/AdminExaminations/reducer';
-import { startFetchExams, startDeleteExam } from '../../services/AdminExaminations/actions'
+import {
+  startFetchExams,
+  startDeleteExam,
+} from '../../services/AdminExaminations/actions';
 
 export class AdminExamsTabRaw extends Component {
-
-    componentDidMount(){
-      this.props.startFetchExams();
-    }
+  componentDidMount() {
+    this.props.startFetchExams();
+  }
   render() {
     const { exams } = this.props;
 
@@ -23,12 +25,27 @@ export class AdminExamsTabRaw extends Component {
           </tr>
         </thead>
         <tbody>
-          {exams.map( item => (
+          {exams.map(item => (
             <tr key={item.IDExamination}>
               <th scope="row">{item.IDExamination}</th>
               <td>{item.ExamName}</td>
 
-              <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit toto vyšetření?')) this.props.startDeleteExam(item.IDExamination)}} className="material-icons" id="cssFooterArrow">delete</i></td>
+              <td>
+                <i
+                  onClick={e => {
+                    if (
+                      window.confirm(
+                        'Jste si jistí, že chcete odstranit toto vyšetření?',
+                      )
+                    )
+                      this.props.startDeleteExam(item.IDExamination);
+                  }}
+                  className="material-icons"
+                  id="cssFooterArrow"
+                >
+                  delete
+                </i>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -37,7 +54,7 @@ export class AdminExamsTabRaw extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const exams = getAdminExams(state.adminExams);
 
   return {
@@ -47,7 +64,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   startFetchExams,
-  startDeleteExam
-}
+  startDeleteExam,
+};
 
-export const AdminExamsTab = connect(mapStateToProps, mapDispatchToProps)(AdminExamsTabRaw);
+export const AdminExamsTab = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(AdminExamsTabRaw);

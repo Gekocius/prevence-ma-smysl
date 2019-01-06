@@ -2,12 +2,12 @@ import expressAsyncAwait from 'express-async-await';
 import { Router } from 'express';
 
 import {
-    examController,
-    examBasicController,
-    examAdvancedController,
-    examNewController,
-    examDeleteController,
-    examUpdateController,
+  examController,
+  examBasicController,
+  examAdvancedController,
+  examNewController,
+  examDeleteController,
+  examUpdateController,
 } from './examController';
 
 const router = expressAsyncAwait(Router());

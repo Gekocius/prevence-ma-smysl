@@ -9,21 +9,25 @@ console.log(process.env.DB_USER);
 const { PORT = 3030 } = process.env;
 const { DB_CONNECTIONSTRING } = process.env;
 
-
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
+  {
     dialect: 'mysql',
-    logging: false
-});
+    logging: false,
+  },
+);
 
 sequelize
-    .authenticate()
-    .then(() => {
-        console.log('Connection has been established successfully.');
-    })
-    .catch(err => {
-        console.error('Unable to connect to the database:', err);
-    });
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}!`);
+  console.log(`Server started on http://localhost:${PORT}!`);
 });

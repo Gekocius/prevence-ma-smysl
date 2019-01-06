@@ -1,15 +1,14 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 
-import {Menu} from '../atoms/Menu';
-import {MenuButton} from '../atoms/MenuButton';
+import { Menu } from '../atoms/Menu';
+import { MenuButton } from '../atoms/MenuButton';
 
 export class TopNav extends Component {
-
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      visible: false
+      visible: false,
     };
 
     this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -23,17 +22,16 @@ export class TopNav extends Component {
 
   toggleMenu() {
     this.setState({
-        visible: !this.state.visible
+      visible: !this.state.visible,
     });
   }
 
   render() {
-    const { visible } = this.state
+    const { visible } = this.state;
     return (
       <div>
         <MenuButton handleMouseDown={this.handleMouseDown} />
-        <Menu handleMouseDown={this.handleMouseDown}
-              menuVisibility={visible}/>
+        <Menu handleMouseDown={this.handleMouseDown} menuVisibility={visible} />
       </div>
     );
   }

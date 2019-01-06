@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {Table} from 'reactstrap';
+import { Table } from 'reactstrap';
 import { getAdminStories } from '../../services/AdminStories/reducer';
-import { startFetchStories, startDeleteStory } from '../../services/AdminStories/actions'
+import {
+  startFetchStories,
+  startDeleteStory,
+} from '../../services/AdminStories/actions';
 
 export class AdminStoryTabRaw extends Component {
-
-  componentDidMount(){
+  componentDidMount() {
     this.props.startFetchStories();
   }
   render() {
@@ -23,12 +25,29 @@ export class AdminStoryTabRaw extends Component {
           </tr>
         </thead>
         <tbody>
-          {stories.map( item => (
+          {stories.map(item => (
             <tr key={item.IDStory}>
               <th scope="row">{item.IDStory}</th>
-              <td>{item.Name}, {item.Age}</td>
+              <td>
+                {item.Name}, {item.Age}
+              </td>
               {/* <td><a href=""><i className="material-icons" id="cssFooterArrow">create</i></a></td> */}
-              <td><i onClick={(e) => { if (window.confirm('Jste si jistí, že chcete odstranit tento příběh?')) this.props.startDeleteStory(item.IDStory)}} className="material-icons" id="cssFooterArrow">delete</i></td>
+              <td>
+                <i
+                  onClick={e => {
+                    if (
+                      window.confirm(
+                        'Jste si jistí, že chcete odstranit tento příběh?',
+                      )
+                    )
+                      this.props.startDeleteStory(item.IDStory);
+                  }}
+                  className="material-icons"
+                  id="cssFooterArrow"
+                >
+                  delete
+                </i>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -37,7 +56,7 @@ export class AdminStoryTabRaw extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const stories = getAdminStories(state.adminStories);
 
   return {
@@ -47,7 +66,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   startFetchStories,
-  startDeleteStory
-}
+  startDeleteStory,
+};
 
-export const AdminStoryTab = connect(mapStateToProps, mapDispatchToProps)(AdminStoryTabRaw);
+export const AdminStoryTab = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(AdminStoryTabRaw);

@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import {Row, Col} from 'reactstrap';
-import {AdminAdvancedFilterContainer} from '../organisms/AdminAdvancedFilterContainer';
+import React, { Component } from 'react';
+import { Row, Col } from 'reactstrap';
+import { AdminAdvancedFilterContainer } from '../organisms/AdminAdvancedFilterContainer';
 
 export class AdminAdvanced extends Component {
   render() {
@@ -9,9 +9,9 @@ export class AdminAdvanced extends Component {
         <Row>
           <Col>
             <AdminAdvancedFilterContainer
-            onChange = {this.props.changeExaminationState}
-            agefromextValue = {this.props.agefromext}
-            ageuntilextValue = {this.props.ageuntilext}
+              onChange={this.props.changeExaminationState}
+              agefromextValue={this.props.agefromext}
+              ageuntilextValue={this.props.ageuntilext}
             />
           </Col>
         </Row>
